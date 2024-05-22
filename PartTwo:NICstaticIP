@@ -11,6 +11,12 @@ a client to Active Directory.
 
 Now we need to set a static IP for the internal NIC we just added.
 Next, go into Settings and choose Network & Internet, then Change Adapter options.
+Right click on Ethernet 2 and click "Internet Protocol Version 4 (TCP/IPv4)". This will allow us to set a static IP for this domain controller for the intneral
+network. From there click properties and click the "Use the following IP address" and type in 172.16.0.1 for the IP address and 255.255.255.0 for the subnet mask
+(I will be making another tutorial explaining the significance of IP addresses and their roles. The last thing we need to configure is the DNS server.
+Choose the option to input your own DNS and choose 127.0.0.1 for this. 127.0.0.1 is what is known as a loopback address, it points back to the machine your using.
 
+Finally before we install the Active Directory role on this server, let's rename the NIC's so it's easier for us to recongnize later on.
+To find out which one is the internal NIC, double click and on one and click the "Details" button. It should look like the picture showed below. The NIC with the IP address of 172.16.0.1 rename "Internal".
 
 Now, go back to the initial Server Manager > Dashboard screen, and choose "Add Roles and Features". Choose "Role-based or feature-based installation"
