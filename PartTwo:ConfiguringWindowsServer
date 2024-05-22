@@ -1,0 +1,16 @@
+In part one, we walked through the steps to spin up the initial Windows Server. Now we will configure a few settings before adding roles and features to the server, such as Active Directory.
+
+You should see a similar screen as the one pictures below. Click on "Configure this Server". Find the option for "IE Enhanced Security Configuration" and choose off. This will make it easier to
+browse the web on the project. It will stop the confirmation pop-up for every site you visit.
+(insert screenshot)
+
+Now we need to add an internal NIC adapter. For this step we need to shut down the VM.
+On the left side menu choose Network, then the Adapter 2 tab, check the box Enable Network Adapter and choose "Internal Network" from the "Attached to:" section. You can leave the name as-is for now.
+What we just did was add a virtual Network Interface Card to the VM. This allows for data to traverse the network internally without reaching any external networks. This is important when we connect
+a client to Active Directory.
+
+Now we need to set a static IP for the internal NIC we just added.
+Next, go into Settings and choose Network & Internet, then Change Adapter options.
+
+
+Now, go back to the initial Server Manager > Dashboard screen, and choose "Add Roles and Features". Choose "Role-based or feature-based installation"
