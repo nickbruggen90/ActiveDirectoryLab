@@ -3,7 +3,7 @@
  ### [YouTube Demonstration?](https://youtu.be/)
 
 <h2>Index</h2>
-<a href="https://github.com/nickbruggen90/ActiveDirectoryLab/blob/main/SettingUpVirtualBox">Part One: VirutalBox Settings/Windows Server 2019 ISO</a><br />
+<a href="https://github.com/nickbruggen90/ActiveDirectoryLab/blob/main/PartOne%3ASettingUpVirtualBox">Part One: VirutalBox Settings/Windows Server 2019 ISO</a><br />
 <a href="https://github.com/nickbruggen90/ActiveDirectoryLab/blob/main/PartTwo%3ANICstaticIP">Part Two: Configuring NIC/static IP</a><br />
 
 <h2>Environments Used </h2>
