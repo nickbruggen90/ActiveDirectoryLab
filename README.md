@@ -11,7 +11,7 @@
 - <b>Windows Server 2019
 - VirtualBox</b>
 
-<h2>Program walk-through:</h2>
+<h2>Details</h2>
 
 <p align="center">
 Launch the utility: <br/>
