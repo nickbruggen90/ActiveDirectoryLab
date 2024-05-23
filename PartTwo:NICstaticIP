@@ -1,22 +1,27 @@
-In part one, we walked through the steps to spin up the initial Windows Server. Now we will configure a few settings before adding roles and features to the server, such as Active Directory.
+In part one, we walked through the steps to spin up the initial Windows Server. Now we will configure a few settings before adding roles and features to the server, such as Active Directory Domain Services.
 
-You should see a similar screen as the one pictures below. Click on "Configure this Server". Find the option for "IE Enhanced Security Configuration" and choose off. This will make it easier to
-browse the web on the project. It will stop the confirmation pop-up for every site you visit.
+You should see a similar screen as the one pictured below. 
+Click on "Configure this Server" and navigate to the option for "IE Enhanced Security Configuration" and choose off. This will make it easier to browse the web inside the VM.
 (insert screenshot)
 
-Now we need to add an internal NIC adapter. For this step we need to shut down the VM.
-On the left side menu choose Network, then the Adapter 2 tab, check the box Enable Network Adapter and choose "Internal Network" from the "Attached to:" section. You can leave the name as-is for now.
-What we just did was add a virtual Network Interface Card to the VM. This allows for data to traverse the network internally without reaching any external networks. This is important when we connect
-a client to Active Directory.
+Now we need to add an internal NIC adapter. For this step we need to shut down the VM and go back to the VirtualBox window.
+On the left side menu choose Network, then the Adapter 2 tab. Check the box "Enable Network Adapter" and choose "Internal Network" from the "Attached to:" section. 
+You can leave the name as-is for now.
+What we just did was add a virtual Network Interface Card to the VM. This allows for data to traverse the network internally without reaching any external networks (i.e.; WAN).
+(insert screenshot)
 
 Now we need to set a static IP for the internal NIC we just added.
-Next, go into Settings and choose Network & Internet, then Change Adapter options.
-Right click on Ethernet 2 and click "Internet Protocol Version 4 (TCP/IPv4)". This will allow us to set a static IP for this domain controller for the intneral
-network. From there click properties and click the "Use the following IP address" and type in 172.16.0.1 for the IP address and 255.255.255.0 for the subnet mask
-(I will be making another tutorial explaining the significance of IP addresses and their roles. The last thing we need to configure is the DNS server.
-Choose the option to input your own DNS and choose 127.0.0.1 for this. 127.0.0.1 is what is known as a loopback address, it points back to the machine your using.
+In order to do that, spin up the Windows Server VM and navigate to Settings in Windows and choose Network & Internet, then Change Adapter options.
+There should be two network adapters, one for internal traffic and one routing internal traffic outside of the network.
+Next we need to set a static IPv4 address for the internal NIC.
+To verify which is the internal NIC, double click on one and find the "Details" button. Under IPv4 find the NIC that starts with 169. 
+Exit the "Details" window and then choose "Properties" click "Internet Protocol Version 4 (TCP/IPv4)" then the "Properties" option. 
+Click the "Use the following IP address" and type in 172.16.0.1 for the IP address and 255.255.255.0 for the subnet mask.
+(I will be making another tutorial explaining the significance of IP addresses and their roles).
+The last thing we need to do for this section is to choose the prefered DNS server.
+You will want to input your own DNS server address. For this tutorial we will choose 127.0.0.1.
+127.0.0.1 is what is known as a loopback address, it points back to the machine your using. And will be installing the DNS server role on this Windows Server in the coming parts.
+Lastly, lets rename the NIC's so it is easier for us to recognize later on. Exit back to the Network Connections window where the two NICs are located. Right click on the one we just
+changed the IPv4 address on, and rename it something obvious. For example "INTERNALxx". Something blatantly obvious for this demo.
 
-Finally before we install the Active Directory role on this server, let's rename the NIC's so it's easier for us to recongnize later on.
-To find out which one is the internal NIC, double click and on one and click the "Details" button. It should look like the picture showed below. The NIC with the IP address of 172.16.0.1 rename "Internal".
-
-Now, go back to the initial Server Manager > Dashboard screen, and choose "Add Roles and Features". Choose "Role-based or feature-based installation"
+In part three we will add the AD DS role to the server.
