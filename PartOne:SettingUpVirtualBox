@@ -5,14 +5,19 @@ Click on "New" and it will allow you to choose the critera for the VM.
 (insert screenshot)
 
 Choose a desired name for the VM. Along with the a folder to save the contents.
-You can visit (https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019) to obtain the free ISO for this project. The ISO is an evalution copy of
-Windows Server 2019 which lasts only 180 days.
-Make sure to choose the "desktop experience" option from the "Editions" drop down menu. Either standard or datacenter options are fine.
+You can visit (https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019) to obtain the free ISO for this project. This ISO is an evalution copy of
+Windows Server 2019, which lasts only 180 days.
+Make sure you choose the "desktop experience" option from the "Editions" drop down menu. Either standard or datacenter options are fine for this tutorial.
 
 Next would be to choose the Username and Password for administration log-in.
-Also your going to need to choose a domain name. Choose something that you can remember, this is only a lab and can (and should) be redone for practice.
+Also your going to need to choose a local domain name. This will be the domain we connect our clients to.
 
 In the Hardware section, choose the appropriate amount of RAM for the project. I use 2GB of RAM and is always sufficient for this.
-Then going to the last settings options, I always choose 30GB of hard disk space and is always sufficient.
+Then going on to the last settings options, I always choose 30GB of hard disk space and is always sufficient.
+
+The beauty of VirtualBox is the ability to make mistakes and not have it affect the overall system. We refer to this as "Sandbox". VirtualBox allows you to
+run an OS in sandbox mode. So if you make any mistakes, or need to change initial configurations (RAM, disk space), all you have to do is spin up another
+VM inside of VirtualBox and you will never mess up the underlying OS.
 
 After you create the VM it will take approximatelt 5-10 minutes to spin up.
+Coffee time? Stretch time? :)
