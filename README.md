@@ -9,7 +9,7 @@
 - VirtualBox</b>
 
 <h2>Details</h2>
-#[Video Walk-Through](https://youtu.be/)
+<a href="https://www.youtube.com">Video Walk-Through</a><br />
 
 
 <!--
