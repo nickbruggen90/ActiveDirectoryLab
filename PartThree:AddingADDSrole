@@ -1,0 +1,39 @@
+In this section we will add the Active Directory Domain Services(ADDS) role to the Windows Server.
+
+Bring up the Server Manager dashboard and choose the option to "Add roles and features"
+The first screen is a confirmation screen, asking you to verify three points. Read through this and
+confirm you meet the requirements. They're basic settings and should already be configured by this
+point.
+
+The next screen will ask if the installation is role-based or a remote desktop service. In this case
+for ADDS it is role-based.
+
+The next screen will allow you to choose the correct server. In this case, we should have only one 
+server available to choose from. You can confirm it is the right server by checking the IP Address
+and seeing if it matches the IP we changed it to in the previous section. (172.16.0.1)
+(insert SS)
+
+Then it will ask you to choose the role you should like to install.
+We are installing the Active Directory Domain Services role, check the box and choose next, then
+"add feature". The next screen is additional option for the server. For this tutorial press next, as
+everything is set-up how it should be for this. And next on the following screen as well.(insert SS).
+(I will cover many of these options later in the tutorial.)
+
+Then install. :)
+
+At the top you should see an exclamation point at the top of the dashboard.
+This will allow you to promote the domain controller. For this tutorial we are going to "add a new
+forest". (I will try to cover the other two options in future tutorials)
+
+Choose a root domain for ADDS. This will be the FQDN that you will connect to, internally and externally.
+I am choosing ADLabDC.local for this project.
+(insert SS)
+
+Then a DSRM password, which we will not be using, but is required. Since this is a sandbox example,
+choose the same password throughout the tutorial so it is easier to remember. NEVER do thi in real life
+scenarios though. Click next through the follwing screens and it will confirm all prerequisities and
+configure and install ADDS.
+(insert SS)
+
+In the next section we will...
+
